@@ -4,7 +4,7 @@ import CartItem from './CartItem';
 
 export default function CartList() {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
         <div className="col">
           <ProductConsumer>
