@@ -16,6 +16,7 @@ export default function ProductFilter() {
           handleChange,
           storeProducts,
         } = value;
+
         let companies = new Set();
         companies.add('all');
         for (let product in storeProducts) {
@@ -46,9 +47,9 @@ export default function ProductFilter() {
                   <select
                     name="company"
                     id="company"
-                    className="filter-item"
                     onChange={handleChange}
                     value={company}
+                    className="filter-item"
                   >
                     {companies.map((company, index) => {
                       return (
@@ -69,13 +70,13 @@ export default function ProductFilter() {
                   </label>
                   <input
                     type="range"
+                    name="price"
+                    id="price"
+                    min={min}
+                    max={max}
                     className="filter-price"
                     value={price}
                     onChange={handleChange}
-                    id="price"
-                    name="price"
-                    min={min}
-                    max={max}
                   />
                 </div>
                 {/* end of price range */}
